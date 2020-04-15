@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Calculator</title>
+    <link href="StyleSheet.css" rel="stylesheet" />
+    <script type="text/javascript" src="Calculations.js"></script>
+</head>
+<body>
+    <table>
+        <tr class="heading">
+            <td>Calculator</td>
+        </tr>
+        <tr>
+            <td>
+                <input type="text" id="input" placeholder="0" readonly="readonly" />
+                <input type="text" id="result" readonly="readonly" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="button" value="CE" onclick="clearscreen()" />
+                <input type="button" value="/" onclick="fetchoperand('/')" />
+                <input type="button" value="*" onclick="fetchoperand('*')" />
+                <input type="button" value="&#8592;" onclick="backspace()" />
+                <br />
+                <input type="button" value="1" onclick="fetchnum(1)" />
+                <input type="button" value="2" onclick="fetchnum(2)" />
+                <input type="button" value="3" onclick="fetchnum(3)" />
+                <input type="button" value="+" onclick="fetchoperand('+')" />
+                <br />
+                <input type="button" value="4" onclick="fetchnum(4)" />
+                <input type="button" value="5" onclick="fetchnum(5)" />
+                <input type="button" value="6" onclick="fetchnum(6)" />
+                <input type="button" value="-" onclick="fetchoperand('-')" />
+                <br />
+                <input type="button" value="7" onclick="fetchnum(7)" />
+                <input type="button" value="8" onclick="fetchnum(8)" />
+                <input type="button" value="9" onclick="fetchnum(9)" />
+                <input type="button" value="( )" onclick="fetchbrackets()" />
+                <br />
+                <input type="button" value="+/-" onclick="fetchoperand('+/-')" />
+                <input type="button" value="0" onclick="fetchnum(0)" />
+                <input type="button" value="=" onclick="result()" style="width:125px" />
+
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
