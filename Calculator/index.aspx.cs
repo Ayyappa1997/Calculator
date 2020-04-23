@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -12,6 +12,7 @@ namespace Calculator
         double var_inp1;
         double var_inp2;
         string action;
+        string var_result;
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -25,7 +26,22 @@ namespace Calculator
                 var_inp2 = Convert.ToDouble(txtInput2.Text);
                 txtInput1.Text = "";
                 txtInput2.Text = "";
-                txtInput1.Text = calculate.Operations(var_inp1, var_inp2, action).ToString();
+                switch (action)
+                {
+                    case "Add":
+                        var_result = calculate.Add(var_inp1, var_inp2).ToString();
+                         break;
+                    case "Sub":
+                        var_result = calculate.Sub(var_inp1, var_inp2).ToString();
+                        break;
+                    case "Mul":
+                        var_result = calculate.Mul(var_inp1, var_inp2).ToString();
+                        break;
+                    case "Div":
+                        var_result = calculate.Div(var_inp1, var_inp2).ToString();
+                        break;                        
+                }
+                txtInput1.Text = var_result;
             }
 
             
